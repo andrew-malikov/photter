@@ -14,34 +14,25 @@ namespace Photter.Configs {
 
         private JsonProjectProvider(string workDir, string configFileName) {
             if (String.IsNullOrEmpty(workDir))
-                throw new NotImplementedException();
+                throw new ArgumentException($"wrong the path to work directory: {workDir}");
 
             _pathToConfig = Path.Combine(workDir, configFileName);
 
             if (String.IsNullOrWhiteSpace(_pathToConfig))
-                throw new NotImplementedException();
+                throw new ArgumentException($"wrong the path to config file: {_pathToConfig}");
         }
 
         public ProjectConfig Provide() {
             var serializedProject = "";
 
+            if (!File.Exists(_pathToConfig))
+                throw new FileNotFoundException($"can't find the project config: {_pathToConfig}");
+
             try {
                 serializedProject = File.ReadAllText(_pathToConfig);
             }
-            catch (ArgumentException) {
-                throw new NotImplementedException();
-            }
-            catch (PathTooLongException) {
-                throw new NotImplementedException();
-            }
-            catch (DirectoryNotFoundException) {
-                throw new NotImplementedException();
-            }
             catch (IOException) {
-                throw new NotImplementedException();
-            }
-            catch (UnauthorizedAccessException) {
-                throw new NotImplementedException();
+                throw new IOException($"Can't open the config file: {_pathToConfig}");
             }
 
             return JsonConvert.DeserializeObject<ProjectConfig>(serializedProject);
