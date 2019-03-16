@@ -26,7 +26,8 @@ namespace Photter {
             container.RegisterSingleton<ApiUrls>();
             container.RegisterSingleton<CredentialsProvider>();
             container.RegisterSingleton<HttpClient>();
-            container.RegisterSingleton<IValidatableHttpResponse>();
+            container.RegisterInstance<IValidatableHttpResponse>(
+                new ChainableValidationHandler(new RateLimitValidationHandler()));
             container.RegisterSingleton<ConnectionProvider>();
             container.RegisterSingleton<UnsplashClientFactory>();
 
