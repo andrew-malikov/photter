@@ -7,16 +7,14 @@ using Photter.Configs;
 
 namespace Photter.Unsplash {
     public class CredentialsProvider {
-        private Lazy<string> _appId;
+        private ProjectConfig _configs;
 
-        public CredentialsProvider(IProjectProvider projectProvider) {
-            _appId = new Lazy<string>(
-                () => projectProvider.Provide().AppId
-            );
+        public CredentialsProvider(ProjectConfig configs) {
+            _configs = configs;
         }
 
         public Credentials Provide() {
-            return new Credentials(_appId.Value, "NOT_NEEDED");
+            return new Credentials(_configs.AppId, "NOT_NEEDED");
         }
     }
 }
