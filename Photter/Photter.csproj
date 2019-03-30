@@ -7,7 +7,7 @@
 
   <ItemGroup>
       <PackageReference Include="LightInject" Version="5.4.0" />
-      <PackageReference Include="System.CommandLine.Experimental" Version="0.1.0-alpha-63724-02" />
+      <PackageReference Include="System.CommandLine.Experimental" Version="0.2.0-alpha.19156.3" />
   </ItemGroup>
 
   <ItemGroup>

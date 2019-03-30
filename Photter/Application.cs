@@ -17,7 +17,7 @@ namespace Photter {
 
         protected override RootCommand ProvideInternalRootCommand() {
             return new PhotterContext(Configuration)
-                .ServiceProvider
+                .Prepare()
                 .GetInstance<RootHandler>()
                 .Root;
         }
