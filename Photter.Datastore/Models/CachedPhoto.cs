@@ -7,6 +7,6 @@ namespace Photter.Datastore.Models {
 
         public bool IsCached { get; set; }
 
-        public PhotoCollection Collection { get; set; }
+        public PhotoCollection PhotoCollection { get; set; }
     }
 }

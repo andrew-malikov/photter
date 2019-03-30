@@ -5,8 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Photter.Datastore.Models {
     public class PhotoCollection {
-        [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
+
+        public string UnsplashId { get; set; }
 
         public string Title { get; set; }
 
@@ -15,6 +16,6 @@ namespace Photter.Datastore.Models {
 
         public int TotalPhotos { get; set; }
 
-        public IList<CachedPhoto> CachedPhotos = new List<CachedPhoto>();
+        public IList<CachedPhoto> CachedPhotos { get; set; } = new List<CachedPhoto>();
     }
 }
