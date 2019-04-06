@@ -11,4 +11,6 @@ jobs:
 - job: build
   container: linux
   steps:
-  - script: dotnet cake
+  - bash: |
+      export PATH=$PATH:$HOME/.dotnet/tools
+      dotnet cake
