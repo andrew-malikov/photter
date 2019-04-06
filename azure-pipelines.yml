@@ -5,7 +5,7 @@ trigger:
 resources:
   containers:
   - container: linux
-    image: mcr.microsoft.com/dotnet/core/sdk:2.2
+    image: mono:latest
 
 jobs:
 - job: build
@@ -13,7 +13,4 @@ jobs:
     vmImage: 'ubuntu-16.04'
   container: linux
   steps:
-  - bash: |
-      - dotnet tool install -g Cake.Tool
-      - export PATH=$PATH:$HOME/.dotnet/tools
-      - dotnet cake build.cake
+  - bash: bash build.sh
