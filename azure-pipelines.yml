@@ -5,12 +5,15 @@ trigger:
 resources:
   containers:
   - container: linux
-    image: dockfool/cake-docker
+    image: mcr.microsoft.com/dotnet/core/sdk:2.2
 
 jobs:
 - job: build
+  pool:
+    vmImage: 'ubuntu-16.04'
   container: linux
   steps:
   - bash: |
-      export PATH=$PATH:$HOME/.dotnet/tools
-      dotnet cake
+      - dotnet tool install -g Cake.Tool
+      - export PATH=$PATH:$HOME/.dotnet/tools
+      - dotnet cake build.cake
