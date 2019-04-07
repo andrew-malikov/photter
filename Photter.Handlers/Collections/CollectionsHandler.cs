@@ -6,7 +6,7 @@ namespace Photter.Handlers.Collections {
         public Command Command { get; private set; }
 
         public CollectionsHandler(IEnumerable<ICollectionsHandler> handlers) {
-            Command = new Command("db");
+            Command = new Command("collections");
 
             foreach (var handler in handlers)
                 Command.AddCommand(handler.Command);

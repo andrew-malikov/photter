@@ -17,6 +17,7 @@ using Photter.Unsplash;
 using Photter.Handlers;
 using Photter.Handlers.Sync;
 using Photter.Handlers.Database;
+using Photter.Handlers.Collections;
 
 namespace Photter {
     public class PhotterContext : Context {
@@ -70,18 +71,46 @@ namespace Photter {
                 new RootCommand("photter")
             );
 
-            // sync handlers
+            // sync handlers [deprecated]
             container.Register<ISyncCollectionService, SyncCollectionService>();
-            container.RegisterSingleton<INestedHandler, SyncCollectionHandler>("SyncHandler");
+            container.RegisterSingleton<INestedHandler, SyncCollectionHandler>(
+                "SyncHandler"
+            );
 
             // db handlers
             container.Register<IDbInitService, DbInitService>();
-            container.RegisterSingleton<IDbHandler, DbInitHandler>("DbInitHandler");
+            container.RegisterSingleton<IDbHandler, DbInitHandler>(
+                "DbInitHandler"
+            );
 
             container.Register<IDbClearService, DbClearService>();
-            container.RegisterSingleton<IDbHandler, DbClearHandler>("DbClearHandler");
+            container.RegisterSingleton<IDbHandler, DbClearHandler>(
+                "DbClearHandler"
+            );
 
-            container.RegisterSingleton<INestedHandler, DbHandler>("DbHandler");
+            container.RegisterSingleton<INestedHandler, DbHandler>(
+                "DbHandler"
+            );
+
+            // collections handlers
+            container.Register<ICollectionsAddService, CollectionsAddService>();
+            container.RegisterSingleton<ICollectionsHandler, CollectionsAddHandler>(
+                "CollectionsAddHandler"
+            );
+
+            container.Register<ICollectionsListService, CollectionsListService>();
+            container.RegisterSingleton<ICollectionsHandler, CollectionsListHandler>(
+                "CollectionsListHandler"
+            );
+
+            container.Register<ICollectionsSyncService, CollectionsSyncService>();
+            container.RegisterSingleton<ICollectionsHandler, CollectionsSyncHandler>(
+                "CollectionsSyncHandler"
+            );
+
+            container.RegisterSingleton<INestedHandler, CollectionsHandler>(
+                "CollectionsHandler"
+            );
 
             container.RegisterSingleton<RootHandler>();
         }

@@ -4,7 +4,7 @@ using Phaber.Unsplash.Models;
 using Photter.Datastore.Models;
 
 namespace Photter.Datastore.Contracts {
-    class PhotoCollectionFromUnsplash : PhotoCollection {
+    public class PhotoCollectionFromUnsplash : PhotoCollection {
         public PhotoCollectionFromUnsplash(Collection collection) {
             UnsplashId = collection.Id;
             Title = collection.Title;
