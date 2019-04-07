@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Phaber.Unsplash" Version="1.2.2" />
+    <PackageReference Include="Phaber.Unsplash" Version="1.3.3" />
   </ItemGroup>
 
   <ItemGroup>
