@@ -1,6 +1,6 @@
 using Photter.Datastore.Services;
 
-namespace Photter.Handlers.Database.Clear {
+namespace Photter.Handlers.Database {
     public class DbClearService : IDbClearService {
         private DbService _dbService;
 

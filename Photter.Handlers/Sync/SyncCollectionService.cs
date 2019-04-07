@@ -23,6 +23,13 @@ namespace Photter.Handlers.Sync {
             Console.WriteLine(
                 $"{collection.Id} - {collection.Title} - {collection.TotalPhotos}"
             );
+
+            foreach (var page in _client.GetPhotos(collectionId)) {
+                foreach (var photo in page.Body)
+                    Console.WriteLine(
+                        $"{photo.Id} - {photo.Downloads} - {photo.Width}/{photo.Height}"
+                    );
+            }
         }
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Unsplash", "Photter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Configs", "Photter.Configs\Photter.Configs.csproj", "{E1C4B036-A218-415F-B523-C5634251E4FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Handlers", "Photter.Handlers\Photter.Handlers.csproj", "{FF0EF742-4453-43BA-855F-1B1DC7CEE703}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{E1C4B036-A218-415F-B523-C5634251E4FE}.Release|x64.Build.0 = Release|Any CPU
 		{E1C4B036-A218-415F-B523-C5634251E4FE}.Release|x86.ActiveCfg = Release|Any CPU
 		{E1C4B036-A218-415F-B523-C5634251E4FE}.Release|x86.Build.0 = Release|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Debug|x64.Build.0 = Debug|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Debug|x86.Build.0 = Debug|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Release|x64.ActiveCfg = Release|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Release|x64.Build.0 = Release|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF0EF742-4453-43BA-855F-1B1DC7CEE703}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

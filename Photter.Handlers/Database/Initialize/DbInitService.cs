@@ -1,6 +1,6 @@
 using Photter.Datastore.Services;
 
-namespace Photter.Handlers.Database.Initialize {
+namespace Photter.Handlers.Database {
     public class DbInitService : IDbInitService {
         private DbService _dbService;
 

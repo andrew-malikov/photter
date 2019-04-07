@@ -2,9 +2,7 @@ using System;
 using System.CommandLine;
 using System.CommandLine.Invocation;
 
-using Photter.Handlers.Db;
-
-namespace Photter.Handlers.Database.Clear {
+namespace Photter.Handlers.Database {
     public class DbClearHandler : IDbHandler {
         public Command Command { get; private set; }
 

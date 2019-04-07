@@ -2,9 +2,7 @@ using System;
 using System.CommandLine;
 using System.CommandLine.Invocation;
 
-using Photter.Handlers.Db;
-
-namespace Photter.Handlers.Database.Initialize {
+namespace Photter.Handlers.Database {
     public class DbInitHandler : IDbHandler {
         public Command Command { get; }
 

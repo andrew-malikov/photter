@@ -16,9 +16,7 @@ using Photter.Datastore.Services;
 using Photter.Unsplash;
 using Photter.Handlers;
 using Photter.Handlers.Sync;
-using Photter.Handlers.Database.Initialize;
-using Photter.Handlers.Db;
-using Photter.Handlers.Database.Clear;
+using Photter.Handlers.Database;
 
 namespace Photter {
     public class PhotterContext : Context {

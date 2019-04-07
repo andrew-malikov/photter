@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.CommandLine;
 
-namespace Photter.Handlers.Db {
+namespace Photter.Handlers.Database {
     public class DbHandler : INestedHandler {
         public Command Command { get; private set; }
 
-        public DbHandler(IEnumerable<IDbHandler> dbHandlers) {
+        public DbHandler(IEnumerable<IDbHandler> handlers) {
             Command = new Command("db");
 
-            foreach (var handler in dbHandlers)
+            foreach (var handler in handlers)
                 Command.AddCommand(handler.Command);
         }
     }

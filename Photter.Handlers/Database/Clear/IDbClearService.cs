@@ -1,4 +1,4 @@
-namespace Photter.Handlers.Database.Clear {
+namespace Photter.Handlers.Database {
     public interface IDbClearService {
         void ClearDb();
     }
