@@ -1,11 +1,7 @@
-using System;
-
 using Phaber.Unsplash;
-
-using Photter;
 using Photter.Configs;
 
-namespace Photter.Unsplash {
+namespace Photter.Infrastructure.Unsplash {
     public class CredentialsProvider {
         private ProjectConfig _configs;
 

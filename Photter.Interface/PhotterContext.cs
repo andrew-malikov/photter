@@ -1,44 +1,38 @@
-using System;
 using System.CommandLine;
 using System.Net.Http;
-
 using LightInject;
-
 using Microsoft.EntityFrameworkCore;
-
 using Phaber.Unsplash;
 using Phaber.Unsplash.Clients;
-using Phaber.Unsplash.Http;
-
 using Photter.Configs;
 using Photter.Datastore.Models;
 using Photter.Datastore.Services;
-using Photter.Unsplash;
 using Photter.Handlers;
-using Photter.Handlers.Sync;
-using Photter.Handlers.Database;
 using Photter.Handlers.Collections;
+using Photter.Handlers.Database;
+using Photter.Handlers.Sync;
+using Photter.Infrastructure.Unsplash;
 
-namespace Photter {
+namespace Photter.Interface {
     public class PhotterContext : Context {
         private readonly LaunchConfig _launchConfig;
 
-        public PhotterContext(LaunchConfig launchConfig) : base() {
+        public PhotterContext(LaunchConfig launchConfig) {
             _launchConfig = launchConfig;
         }
 
         protected override void ConfigureServices(ServiceContainer container) {
             // configs
-            container.RegisterInstance<LaunchConfig>(_launchConfig);
+            container.RegisterInstance(_launchConfig);
 
             container.RegisterSingleton<IProjectProvider, JsonProjectProvider>();
-            container.RegisterSingleton<ProjectConfig>(
+            container.RegisterSingleton(
                 context => context.GetInstance<IProjectProvider>().Provide()
             );
 
             // db
             container.RegisterSingleton<DbContextOptionsProvider>();
-            container.RegisterSingleton<DbContextOptions>(
+            container.RegisterSingleton(
                 context => context.GetInstance<DbContextOptionsProvider>().Provide()
             );
 
@@ -55,13 +49,8 @@ namespace Photter {
             );
 
             container.RegisterSingleton<HttpClient>();
-            container.RegisterInstance<IValidatableHttpResponse>(
-                new ChainableValidationHandler(
-                    new RateLimitValidationHandler()
-                )
-            );
 
-            container.RegisterSingleton<Connection>();
+            container.RegisterSingleton<DbLoggerCategory.Database.Connection>();
 
             container.RegisterSingleton<IPhotoClient, PhotoClient>();
             container.RegisterSingleton<ICollectionClient, CollectionClient>();

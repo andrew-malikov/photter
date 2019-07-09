@@ -1,10 +1,6 @@
 using System;
-using System.Threading.Tasks;
-
 using Phaber.Unsplash.Clients;
 using Phaber.Unsplash.Models;
-
-using Photter.Unsplash;
 
 namespace Photter.Handlers.Sync {
     public class SyncCollectionService : ISyncCollectionService {

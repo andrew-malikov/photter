@@ -1,12 +1,6 @@
 using System;
 using System.CommandLine;
 using System.CommandLine.Invocation;
-using System.Threading.Tasks;
-
-using Phaber.Unsplash.Models;
-using Phaber.Unsplash.Clients;
-
-using Photter.Unsplash;
 
 namespace Photter.Handlers.Sync {
     public class SyncCollectionHandler : INestedHandler {

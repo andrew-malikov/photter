@@ -6,6 +6,7 @@ using LightInject;
 
 using Photter.Configs;
 using Photter.Handlers;
+using Photter.Interface;
 
 namespace Photter {
     public class Application : ConsoleRunnable {

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LightInject" Version="5.4.0" />
+    <PackageReference Include="System.CommandLine.Experimental" Version="0.2.0-alpha.19174.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Photter.Configs\Photter.Configs.csproj" />
+    <ProjectReference Include="..\Photter.Infrastructure\Photter.Infrastructure.csproj" />
+    <ProjectReference Include="..\Photter.Interface.Handlers\Photter.Interface.Handlers.csproj" />
+    <ProjectReference Include="..\Photter.Persistance\Photter.Persistance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+      <HintPath>..\..\..\..\..\..\.nuget\packages\microsoft.entityframeworkcore\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+</Project>
