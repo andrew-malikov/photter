@@ -347,5 +347,11 @@ healthchecksdb
 # ionide cache
 .ionide/
 
+# idea
+.idea/
+
+# vscode
+.vscode/
+
 # cake cache
 tools/
