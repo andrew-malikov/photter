@@ -344,5 +344,8 @@ ASALocalRun/
 # BeatPulse healthcheck temp database 
 healthchecksdb
 
+# ionide cache
+.ionide/
+
 # cake cache
 tools/

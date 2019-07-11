@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Phaber.Infrastructure" Version="2.1.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Photter.Core.Configs\Photter.Core.Configs.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Persistance" />
+  </ItemGroup>
+
+</Project>

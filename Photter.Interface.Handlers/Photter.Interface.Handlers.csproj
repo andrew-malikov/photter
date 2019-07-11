@@ -6,11 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Phaber.Unsplash" Version="1.3.3" />
+    <PackageReference Include="System.CommandLine.Experimental" Version="0.2.0-alpha.19174.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Photter.Configs\Photter.Configs.csproj" />
+    <ProjectReference Include="..\Photter.Persistance\Photter.Persistance.csproj" />
   </ItemGroup>
-
 </Project>

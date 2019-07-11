@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -12,9 +12,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Photter.Configs\Photter.Configs.csproj" />
+    <ProjectReference Include="..\Photter.Interface.Handlers\Photter.Interface.Handlers.csproj" />
+    <ProjectReference Include="..\Photter.Persistance\Photter.Persistance.csproj" />
     <ProjectReference Include="..\Photter.Unsplash\Photter.Unsplash.csproj" />
-    <ProjectReference Include="..\Photter.Datastore\Photter.Datastore.csproj" />
-    <ProjectReference Include="..\Photter.Handlers\Photter.Handlers.csproj" />
   </ItemGroup>
 
 </Project>
