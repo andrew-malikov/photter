@@ -1,6 +1,6 @@
 using System;
 
-namespace Photter.Configs {
+namespace Photter.Core.Configs {
     public class LaunchConfig {
         public readonly string[] Args;
 

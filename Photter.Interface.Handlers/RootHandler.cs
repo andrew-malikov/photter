@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.CommandLine;
 
-namespace Photter.Handlers {
+namespace Photter.Interface.Handlers {
     public class RootHandler {
         public readonly RootCommand Root;
 
@@ -10,8 +9,9 @@ namespace Photter.Handlers {
             RootCommand root,
             IEnumerable<INestedHandler> nestedHandlers
         ) {
-            foreach (var handler in nestedHandlers)
+            foreach (var handler in nestedHandlers) {
                 root.AddCommand(handler.Command);
+            }
 
             Root = root;
         }

@@ -1,6 +1,6 @@
 using LightInject;
 
-namespace Photter {
+namespace Photter.Interface {
     public abstract class Context {
         private readonly ServiceContainer ServiceProvider;
 

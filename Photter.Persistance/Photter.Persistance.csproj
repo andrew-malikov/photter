@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../Photter.Configs/Photter.Configs.csproj" />    
+    <ProjectReference Include="..\Photter.Core.Configs\Photter.Core.Configs.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 using System.CommandLine;
 
-namespace Photter.Handlers {
+namespace Photter.Interface.Handlers {
     public interface INestedHandler {
         Command Command { get; }
     }

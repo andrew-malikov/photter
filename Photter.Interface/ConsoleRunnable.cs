@@ -1,11 +1,8 @@
 using System.CommandLine;
 using System.Threading.Tasks;
+using Photter.Core.Configs;
 
-using LightInject;
-
-using Photter.Configs;
-
-namespace Photter {
+namespace Photter.Interface {
     public abstract class ConsoleRunnable {
         protected readonly LaunchConfig Configuration;
         protected readonly RootCommand Root;

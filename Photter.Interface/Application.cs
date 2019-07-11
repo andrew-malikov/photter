@@ -1,14 +1,11 @@
 using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.Threading.Tasks;
-
 using LightInject;
+using Photter.Core.Configs;
+using Photter.Interface.Handlers;
 
-using Photter.Configs;
-using Photter.Handlers;
-using Photter.Interface;
-
-namespace Photter {
+namespace Photter.Interface {
     public class Application : ConsoleRunnable {
         public Application(string[] args) : base(new LaunchConfig(args)) { }
 

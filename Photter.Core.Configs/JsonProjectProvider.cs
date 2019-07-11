@@ -1,9 +1,8 @@
 using System;
 using System.IO;
-
 using Newtonsoft.Json;
 
-namespace Photter.Configs {
+namespace Photter.Core.Configs {
     public class JsonProjectProvider : IProjectProvider {
         private readonly string _pathToConfig;
 

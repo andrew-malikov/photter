@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Photter.Configs\Photter.Configs.csproj" />
+    <ProjectReference Include="..\Photter.Core.Configs\Photter.Core.Configs.csproj" />
     <ProjectReference Include="..\Photter.Infrastructure\Photter.Infrastructure.csproj" />
     <ProjectReference Include="..\Photter.Interface.Handlers\Photter.Interface.Handlers.csproj" />
     <ProjectReference Include="..\Photter.Persistance\Photter.Persistance.csproj" />

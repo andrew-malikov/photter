@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Photter.Configs {
+namespace Photter.Core.Configs {
     public class ProjectConfig {
         public readonly string AppId;
 

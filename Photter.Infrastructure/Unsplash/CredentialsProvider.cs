@@ -1,5 +1,5 @@
 using Phaber.Unsplash;
-using Photter.Configs;
+using Photter.Core.Configs;
 
 namespace Photter.Infrastructure.Unsplash {
     public class CredentialsProvider {
