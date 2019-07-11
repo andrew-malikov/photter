@@ -11,9 +11,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Photter.Core.Configs\Photter.Core.Configs.csproj" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Persistance" />
-  </ItemGroup>
 
 </Project>

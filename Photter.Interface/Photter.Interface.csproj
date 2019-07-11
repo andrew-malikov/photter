@@ -14,13 +14,6 @@
     <ProjectReference Include="..\Photter.Core.Configs\Photter.Core.Configs.csproj" />
     <ProjectReference Include="..\Photter.Infrastructure\Photter.Infrastructure.csproj" />
     <ProjectReference Include="..\Photter.Interface.Handlers\Photter.Interface.Handlers.csproj" />
-    <ProjectReference Include="..\Photter.Persistance\Photter.Persistance.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
-      <HintPath>..\..\..\..\..\..\.nuget\packages\microsoft.entityframeworkcore\2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
-    </Reference>
   </ItemGroup>
   
 </Project>

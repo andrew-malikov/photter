@@ -1,7 +1,6 @@
 using System.CommandLine;
 using System.Net.Http;
 using LightInject;
-using Microsoft.EntityFrameworkCore;
 using Phaber.Unsplash;
 using Phaber.Unsplash.Clients;
 using Photter.Core.Configs;
@@ -32,8 +31,6 @@ namespace Photter.Interface {
             );
 
             container.RegisterSingleton<HttpClient>();
-
-            container.RegisterSingleton<DbLoggerCategory.Database.Connection>();
 
             container.RegisterSingleton<IPhotoClient, PhotoClient>();
             container.RegisterSingleton<ICollectionClient, CollectionClient>();
