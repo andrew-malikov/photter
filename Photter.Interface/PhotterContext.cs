@@ -4,7 +4,6 @@ using LightInject;
 using Phaber.Unsplash;
 using Phaber.Unsplash.Clients;
 using Photter.Core.Configs;
-using Photter.Infrastructure.Unsplash;
 using Photter.Interface.Handlers;
 
 namespace Photter.Interface {
@@ -24,11 +23,6 @@ namespace Photter.Interface {
             );
 
             container.RegisterSingleton<ApiUris>();
-
-            container.RegisterSingleton<CredentialsProvider>();
-            container.RegisterSingleton(
-                context => context.GetInstance<CredentialsProvider>().Provide()
-            );
 
             container.RegisterSingleton<HttpClient>();
 

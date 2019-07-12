@@ -1,6 +1,6 @@
 using System;
 
-namespace Photter.Core.Configs {
+namespace Photter.Interface {
     public class LaunchConfig {
         public readonly string[] Args;
 
@@ -8,7 +8,7 @@ namespace Photter.Core.Configs {
 
         public LaunchConfig(string[] args) : this(args, Environment.CurrentDirectory) { }
 
-        private LaunchConfig(string[] args, string workDir) {
+        public LaunchConfig(string[] args, string workDir) {
             Args = args;
             WorkDir = workDir;
         }

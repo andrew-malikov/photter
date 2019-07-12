@@ -6,12 +6,12 @@ namespace Photter.Core.Configs {
     public class JsonProjectProvider : IProjectProvider {
         private readonly string _pathToConfig;
 
-        public JsonProjectProvider(LaunchConfig config) : this(
-            config.WorkDir,
+        public JsonProjectProvider(string workDir) : this(
+            workDir,
             "photter.config.json"
         ) { }
 
-        private JsonProjectProvider(string workDir, string configFileName) {
+        public JsonProjectProvider(string workDir, string configFileName) {
             if (String.IsNullOrEmpty(workDir))
                 throw new ArgumentException($"wrong the path to work directory: {workDir}");
 
@@ -21,7 +21,7 @@ namespace Photter.Core.Configs {
                 throw new ArgumentException($"wrong the path to config file: {_pathToConfig}");
         }
 
-        public ProjectConfig Provide() {
+        public AppConfig Provide() {
             var serializedProject = "";
 
             if (!File.Exists(_pathToConfig))
@@ -34,7 +34,7 @@ namespace Photter.Core.Configs {
                 throw new IOException($"Can't open the config file: {_pathToConfig}");
             }
 
-            return JsonConvert.DeserializeObject<ProjectConfig>(serializedProject);
+            return JsonConvert.DeserializeObject<AppConfig>(serializedProject);
         }
     }
 }
