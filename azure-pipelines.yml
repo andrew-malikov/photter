@@ -5,7 +5,7 @@ trigger:
 resources:
   containers:
   - container: linux
-    image: cakebuild/cake:2.1-sdk-mono
+    image: cake-docker/latest
 
 jobs:
 - job: build
