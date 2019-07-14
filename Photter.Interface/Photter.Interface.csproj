@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Photter.Core.Configs\Photter.Core.Configs.csproj" />
-    <ProjectReference Include="..\Photter.Infrastructure\Photter.Infrastructure.csproj" />
+    <ProjectReference Include="..\Photter.Core.Configs.Deprecated\Photter.Core.Configs.Deprecated.csproj" />
+    <ProjectReference Include="..\Photter.Infrastructure\Photter.Infrastructure.fsproj" />
     <ProjectReference Include="..\Photter.Interface.Handlers\Photter.Interface.Handlers.csproj" />
   </ItemGroup>
   
