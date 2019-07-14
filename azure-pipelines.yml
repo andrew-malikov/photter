@@ -13,4 +13,4 @@ jobs:
     vmImage: 'ubuntu-16.04'
   container: linux
   steps:
-  - bash: dotnet cake build.cake
+  - bash: cake build.cake
