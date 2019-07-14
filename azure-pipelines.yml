@@ -5,7 +5,7 @@ trigger:
 resources:
   containers:
   - container: linux
-    image: cake-docker/latest
+    image: cake-docker:latest
 
 jobs:
 - job: build
