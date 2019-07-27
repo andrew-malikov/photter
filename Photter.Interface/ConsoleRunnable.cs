@@ -1,6 +1,5 @@
 using System.CommandLine;
 using System.Threading.Tasks;
-using Photter.Core.Configs;
 
 namespace Photter.Interface {
     public abstract class ConsoleRunnable {

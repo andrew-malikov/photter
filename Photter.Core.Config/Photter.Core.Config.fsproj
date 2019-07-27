@@ -10,7 +10,6 @@
 
     <ItemGroup>
         <PackageReference Include="Phaber.Infrastructure" Version="2.1.0"/>
-        <PackageReference Include="System.Reactive" Version="4.1.5" />
     </ItemGroup>
 
     <ItemGroup>

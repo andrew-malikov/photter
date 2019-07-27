@@ -3,7 +3,6 @@ using System.Net.Http;
 using LightInject;
 using Phaber.Unsplash;
 using Phaber.Unsplash.Clients;
-using Photter.Core.Configs;
 using Photter.Interface.Handlers;
 
 namespace Photter.Interface {
@@ -16,11 +15,6 @@ namespace Photter.Interface {
 
         protected override void ConfigureServices(ServiceContainer container) {
             container.RegisterInstance(_launchConfig);
-
-            container.RegisterSingleton<IProjectProvider, JsonProjectProvider>();
-            container.RegisterSingleton(
-                context => context.GetInstance<IProjectProvider>().Provide()
-            );
 
             container.RegisterSingleton<ApiUris>();
 
