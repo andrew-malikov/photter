@@ -1,4 +1,4 @@
-module Photter.Infrastructure.Persistance.FileRepository
+module Photter.Infrastructure.Persistence.FileRepository
 
 open System
 open System.IO

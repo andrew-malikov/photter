@@ -6,10 +6,10 @@
 
     <ItemGroup>
         <Compile Include="Serialization\JsonSerialization.fs"/>
-        <Compile Include="Persistance\SystemEnvironment.fs"/>
-        <Compile Include="Persistance\WorkDirectory.fs"/>
-        <Compile Include="Persistance\FileRepository.fs"/>
-        <Compile Include="Persistance\JsonFileService.fs"/>
+        <Compile Include="Persistence\SystemEnvironment.fs"/>
+        <Compile Include="Persistence\WorkDirectory.fs"/>
+        <Compile Include="Persistence\FileRepository.fs"/>
+        <Compile Include="Persistence\JsonFileService.fs"/>
     </ItemGroup>
 
     <ItemGroup>

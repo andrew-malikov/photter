@@ -1,4 +1,4 @@
-module Photter.Infrastructure.Persistance.WorkDirectory
+module Photter.Infrastructure.Persistence.WorkDirectory
 
 open System
 

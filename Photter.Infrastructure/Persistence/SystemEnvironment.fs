@@ -1,4 +1,4 @@
-module Photter.Infrastructure.Persistance.SystemEnvironment
+module Photter.Infrastructure.Persistence.SystemEnvironment
 
 open System
 
@@ -11,4 +11,4 @@ let get byName =
 let parse<'a> (deserialize : string -> 'a) byName =
     match get byName with
     | Some variable -> variable |> deserialize |> Some
-    | None -> None
+    | _ -> None

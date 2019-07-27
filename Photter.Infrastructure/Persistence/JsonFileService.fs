@@ -1,14 +1,14 @@
-namespace Photter.Infrastructure.Persistance.JsonFileService
+namespace Photter.Infrastructure.Persistence.JsonFileService
 
 open System
-open Photter.Infrastructure.Persistance.FileRepository
+open Photter.Infrastructure.Persistence.FileRepository
 open Photter.Infrastructure.Serialization.JsonSerialization
 
 module Files =
     let get<'a> pathToFile = get deserialize<'a> pathToFile
 
 module ProjectCache =
-    open Photter.Infrastructure.Persistance.WorkDirectory
+    open Photter.Infrastructure.Persistence.WorkDirectory
 
     let get<'a> (pathToFile : string) =
         get deserialize<'a> (Uri(workDirectory, pathToFile))
@@ -22,7 +22,7 @@ module ProjectCache =
     let delete (pathToFile : string) = delete (Uri(workDirectory, pathToFile))
 
 module Project =
-    open Photter.Infrastructure.Persistance.WorkDirectory
+    open Photter.Infrastructure.Persistence.WorkDirectory
 
     let get<'a> (fileName : string) =
         get deserialize<'a> (Uri(workDirectory, fileName))
