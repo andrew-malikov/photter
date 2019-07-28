@@ -9,7 +9,7 @@
         <Compile Include="Persistence\SystemEnvironment.fs"/>
         <Compile Include="Persistence\WorkDirectory.fs"/>
         <Compile Include="Persistence\FileRepository.fs"/>
-        <Compile Include="Persistence\JsonFileService.fs"/>
+        <Compile Include="Persistence\FileService.fs"/>
     </ItemGroup>
 
     <ItemGroup>

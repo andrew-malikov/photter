@@ -5,10 +5,8 @@ open Phaber.Unsplash
 type CredentialsDto = { ApplicationId : string }
 
 module Project =
-    open Photter.Infrastructure.Persistence.JsonFileService.Project
-
-    let get byName =
-        match get<CredentialsDto> byName with
+    let get provide byName =
+        match provide byName with
         | Some dto -> Credentials(dto.ApplicationId, "") |> Some
         | _ -> None
 

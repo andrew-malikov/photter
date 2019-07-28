@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Interface", "Photte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Core.Synchronization", "Photter.Core.Synchronization\Photter.Core.Synchronization.csproj", "{5BC9082B-2409-46E8-B0E2-B41DF816D5A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Core.Project", "Photter.Core.Project\Photter.Core.Project.csproj", "{EE453222-E927-4C12-8F8A-0D6961E44FDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photter.Core.Project", "Photter.Core.Project\Photter.Core.Project.fsproj", "{EE453222-E927-4C12-8F8A-0D6961E44FDE}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Photter.Core.Config", "Photter.Core.Config\Photter.Core.Config.fsproj", "{A17BD756-2F7D-453D-A7DE-918B60B7C4AA}"
 EndProject
