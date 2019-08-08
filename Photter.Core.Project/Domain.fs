@@ -2,27 +2,41 @@ namespace Photter.Core.Project.Domain
 
 open System
 
-type Photo = {
-    Id : string;
-    Name : string;
-    Author : string;
- }
+[<CustomEquality; CustomComparison>]
+type Photo =
+    { Id : string; Name : string; Author : string; }
 
-type PhotoCollection = {
-    Id : string;
-    PersistanceId : string;
-    Photos : Photo list;
-    Updated: DateTime;
- }
+    override photo.Equals(other) =
+        match other with
+        | :? Photo as another -> (photo.Id = another.Id)
+        | _ -> false
 
-type Project = { Collections : PhotoCollection list }
+    override photo.GetHashCode() = hash photo.Id
 
-module PhotoCollections =
-    let equals (x: PhotoCollection) (y: PhotoCollection) = String.Equals(x.Id, y.Id)
+    interface IComparable with
+      member photo.CompareTo other =
+          match other with
+          | :? Photo as another -> compare photo.Id another.Id
+          | _ -> invalidArg "other" "cannot compare values of different types"
 
-    let add collection toCollections = collection :: List.filter (equals collection >> not) toCollections
-    let remove collectionId fromCollections = List.filter (fun c -> c.Id <> collectionId) fromCollections
+[<CustomEquality; CustomComparison>]
+type PhotoCollection =
+    { Id : string;
+      PersistanceId : string;
+      Photos : Photo Set;
+      Updated : DateTime; }
 
+    override photo.Equals(other) =
+        match other with
+        | :? PhotoCollection as another -> (photo.Id = another.Id)
+        | _ -> false
 
-module Photos =
-    let equals (x: Photo) (y: Photo) = String.Equals(x.Id, y.Id)
+    override photo.GetHashCode() = hash photo.Id
+
+    interface IComparable with
+      member photo.CompareTo other =
+          match other with
+          | :? Photo as another -> compare photo.Id another.Id
+          | _ -> invalidArg "other" "cannot compare values of different types"
+
+type Project = { Collections : PhotoCollection Set }
