@@ -3,7 +3,7 @@ namespace Photter.Core.Project.Service
 open System
 
 open Photter.Core.Project.Domain
-
+ 
 module Photos =
     type CollectionDifference = {
         Additions : Photo Set;
@@ -25,3 +25,6 @@ module PhotoCollections =
     let add collections collection =
         Set.remove collection collections |>
         Set.add { collection with Updated = DateTime.UtcNow }
+
+    let remove collections byId = 
+        Set.filter (fun collection -> collection.Id <> byId) collections

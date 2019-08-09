@@ -1,13 +1,42 @@
 module Photter.Core.Cache.Domain
 
-type CachedPhoto = {
-    Id: string;
-    Width: int;
-    Height: int;
-    Author: string;
- }
+open System
 
-type CachedCollection = {
-    Id: string;
-    CachedPhotos: CachedPhoto list
- }
+[<CustomEquality; CustomComparison>]
+type CachedPhoto =
+    { Id : string;
+      Width : int;
+      Height : int;
+      Author : string; }
+
+    override photo.Equals(other) =
+        match other with
+        | :? CachedPhoto as another -> (photo.Id = another.Id)
+        | _ -> false
+
+    override photo.GetHashCode() = hash photo.Id
+
+    interface IComparable with
+      member photo.CompareTo other =
+          match other with
+          | :? CachedPhoto as another -> compare photo.Id another.Id
+          | _ -> invalidArg "other" "cannot compare values of different types"
+
+[<CustomEquality; CustomComparison>]
+type CachedCollection =
+    { Id : string;
+      PersistanceId : string;
+      CachedPhotos : CachedPhoto Set }
+
+    override photo.Equals(other) =
+        match other with
+        | :? CachedCollection as another -> (photo.Id = another.Id)
+        | _ -> false
+
+    override photo.GetHashCode() = hash photo.Id
+
+    interface IComparable with
+      member photo.CompareTo other =
+          match other with
+          | :? CachedCollection as another -> compare photo.Id another.Id
+          | _ -> invalidArg "other" "cannot compare values of different types"

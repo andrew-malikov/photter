@@ -6,6 +6,7 @@
 
     <ItemGroup>
         <Compile Include="Credentials.fs"/>
+        <Compile Include="Domain.fs" />
     </ItemGroup>
 
     <ItemGroup>
