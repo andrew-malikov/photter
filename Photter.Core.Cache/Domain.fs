@@ -4,10 +4,7 @@ open System
 
 [<CustomEquality; CustomComparison>]
 type CachedPhoto =
-    { Id : string;
-      Width : int;
-      Height : int;
-      Author : string; }
+    { Id : string; }
 
     override photo.Equals(other) =
         match other with
@@ -40,3 +37,5 @@ type CachedCollection =
           match other with
           | :? CachedCollection as another -> compare photo.Id another.Id
           | _ -> invalidArg "other" "cannot compare values of different types"
+
+type Cache = { CachedCollection : CachedCollection Set }
