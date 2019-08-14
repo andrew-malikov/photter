@@ -2,7 +2,7 @@ using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.Threading.Tasks;
 using LightInject;
-using Photter.Interface.Handlers;
+using Photter.Interface.Handlers.Old;
 
 namespace Photter.Interface {
     public class Application : ConsoleRunnable {

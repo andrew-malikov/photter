@@ -13,7 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Photter.Core.Config\Photter.Core.Config.fsproj" />
     <ProjectReference Include="..\Photter.Infrastructure\Photter.Infrastructure.fsproj" />
-    <ProjectReference Include="..\Photter.Interface.Handlers\Photter.Interface.Handlers.csproj" />
+    <ProjectReference Include="..\Photter.Interface.Handlers.Old\Photter.Interface.Handlers.Old.csproj" />
   </ItemGroup>
   
 </Project>

@@ -3,7 +3,7 @@ using System.Net.Http;
 using LightInject;
 using Phaber.Unsplash;
 using Phaber.Unsplash.Clients;
-using Photter.Interface.Handlers;
+using Photter.Interface.Handlers.Old;
 
 namespace Photter.Interface {
     public class PhotterContext : Context {

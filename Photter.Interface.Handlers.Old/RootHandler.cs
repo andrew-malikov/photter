@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.CommandLine;
 
-namespace Photter.Interface.Handlers {
+namespace Photter.Interface.Handlers.Old {
     public class RootHandler {
         public readonly RootCommand Root;
 
