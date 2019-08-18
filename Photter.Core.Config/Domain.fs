@@ -8,4 +8,3 @@ type CertainResources = {
 type Config = {
     CertainResources : CertainResources
  }
-
